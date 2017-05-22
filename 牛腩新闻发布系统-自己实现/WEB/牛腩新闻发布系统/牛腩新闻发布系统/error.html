@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>出错页面</title>
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
+    <!--利用javascrip,实现倒计时和跳转到指定页面-->
+    <script type="text/javascript">
+        var i = 5;
+        var intervalid;
+        intervalid = setInterval("fun()", 1000);
+        function fun() {
+            if (i == 0) {
+                window.location.href = "WebForm2.aspx";
+                clearInterval(intervalid);
+            }
+            document.getElementById("nes").innerHTML = i;
+            i--;
+        }
+    </script>
+    <!--利用javascrip,实现倒计时和跳转到指定页面-->
+</head>
+<body>
+    <div id="errorfrm" class="round1">
+        <h3>出错了···</h3>
+        <div id="error">
+            <img src="image/error.gif" />
+            <p>系统出错，请联系管理员！</p>
+            <p>将在<span id="nes">5</span>秒钟后返回首页</p>
+        </div>
+        <div id="footer">版权所有&copy;<a href="http://blog.csdn.net/gnd15732625435?viewmode=contents" target="_blank">琚建飞</a>&amp;<a href="https://www.baidu.com/" target="_blank">百度网</a></div>
+    </div>
+</body>
+</html>

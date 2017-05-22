@@ -1,0 +1,89 @@
+﻿/*
+   *创建人：琚建飞
+   *创建时间：2016年10月1日10:19:34
+   */
+* {
+    margin: 0; /*外边距清零*/
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+}
+
+/*设置超链接的默认值*/
+a:link {
+    /*鼠标没有移上去的超链接的样式*/
+    color: #000; /*颜色*/
+    text-decoration: none; /*没有任何线条*/
+}
+
+a:hover {
+    /*鼠标移到超链接上的样式*/
+    color: #f00;
+    text-decoration: underline; /*有下划线*/
+}
+
+a:visited {
+    /*超链接访问后的样式*/
+    color: #000; /*颜色*/
+    text-decoration: none; /*没有任何线条*/
+}
+
+.round1 {
+    width: 518px;
+    background-image: url("../image/round1_middle.gif");
+    background-position: center;
+    background-repeat: repeat-y;
+    margin: auto; /*使整个登录框居中*/
+    margin-top:160px;
+}
+
+   .round1 h3 {
+        background-image: url("../image/round1_top.gif");
+        background-position: top;    /*下面查*/
+        background-repeat: no-repeat;   /*下面查*/
+        padding: 20px 30px;
+    }
+
+    .round1 #footer {
+        background-image: url("../image/round1_bottom.gif");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        padding: 20px 100px;
+        padding-left: 250px;
+    }
+
+    #loginfrm #login .login_logo {
+        padding-left: 10px;
+        padding-right: 80px;
+        float: left;
+        display:inline;
+    }
+
+    #loginfrm #login p {
+        padding-bottom: 10px;
+    }
+
+.textbox {
+    width: 150px; /*解决不同浏览器文本框大小不一样的问题，认为固定像素就对齐了*/
+}
+
+.textcode {
+    width: 73px;
+}
+/*errror页面样式*/
+#errorfrm #error img {
+    width:230px;
+    margin-left:250px; /*图片左移动250px*/
+    position:relative; 
+    top:-20px;  /*图片向上移动*/
+}
+#errorfrm #error p {
+    margin:20px;
+}
+    #errorfrm #error p span {
+        color:#0094ff;
+        font-size:16px;
+        font-weight:bold;
+    }

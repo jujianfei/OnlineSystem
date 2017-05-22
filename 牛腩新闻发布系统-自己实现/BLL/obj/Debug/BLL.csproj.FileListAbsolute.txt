@@ -1,0 +1,27 @@
+E:\常用文件夹\牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\BLL.dll
+E:\常用文件夹\牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\BLL.pdb
+E:\常用文件夹\牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\DAL.dll
+E:\常用文件夹\牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\Model.dll
+E:\常用文件夹\牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\DAL.pdb
+E:\常用文件夹\牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\Model.pdb
+E:\常用文件夹\牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\常用文件夹\牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\obj\Debug\BLL.dll
+E:\常用文件夹\牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\obj\Debug\BLL.pdb
+E:\常用文件夹\提高班\学习过程\BS资料\00 牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\BLL.dll
+E:\常用文件夹\提高班\学习过程\BS资料\00 牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\BLL.pdb
+E:\常用文件夹\提高班\学习过程\BS资料\00 牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\DAL.dll
+E:\常用文件夹\提高班\学习过程\BS资料\00 牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\Model.dll
+E:\常用文件夹\提高班\学习过程\BS资料\00 牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\DAL.pdb
+E:\常用文件夹\提高班\学习过程\BS资料\00 牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\bin\Debug\Model.pdb
+E:\常用文件夹\提高班\学习过程\BS资料\00 牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\常用文件夹\提高班\学习过程\BS资料\00 牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\obj\Debug\BLL.dll
+E:\常用文件夹\提高班\学习过程\BS资料\00 牛腩新闻系统\牛腩新闻发布系统-自己实现\BLL\obj\Debug\BLL.pdb
+C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\BLL\bin\Debug\BLL.dll
+C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\BLL\bin\Debug\BLL.pdb
+C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\BLL\bin\Debug\DAL.dll
+C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\BLL\bin\Debug\Model.dll
+C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\BLL\bin\Debug\DAL.pdb
+C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\BLL\bin\Debug\Model.pdb
+C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\BLL\obj\Debug\BLL.dll
+C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\BLL\obj\Debug\BLL.pdb

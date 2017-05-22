@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A474D21F-0485-4FAE-9948-C33908A95FDB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>牛腩新闻发布系统</RootNamespace>
+    <AssemblyName>牛腩新闻发布系统</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FreeTextBox">
+      <HintPath>..\..\..\..\FTBv322\FTBv322\bin\FreeTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\m_common.master.cs">
+      <DependentUpon>m_common.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\m_common.master.designer.cs">
+      <DependentUpon>m_common.master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\categorymanager.aspx.cs">
+      <DependentUpon>categorymanager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\categorymanager.aspx.designer.cs">
+      <DependentUpon>categorymanager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\newsmanager.aspx.cs">
+      <DependentUpon>newsmanager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\newsmanager.aspx.designer.cs">
+      <DependentUpon>newsmanager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\addnews.aspx.cs">
+      <DependentUpon>addnews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\addnews.aspx.designer.cs">
+      <DependentUpon>addnews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="common.Master.cs">
+      <DependentUpon>common.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="common.Master.designer.cs">
+      <DependentUpon>common.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control\NewsCategory.ascx.cs">
+      <DependentUpon>NewsCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="control\NewsCategory.ascx.designer.cs">
+      <DependentUpon>NewsCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="homePage.aspx.cs">
+      <DependentUpon>homePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homePage.aspx.designer.cs">
+      <DependentUpon>homePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newsList.aspx.cs">
+      <DependentUpon>newsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newsList.aspx.designer.cs">
+      <DependentUpon>newsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchRes.aspx.cs">
+      <DependentUpon>searchRes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="searchRes.aspx.designer.cs">
+      <DependentUpon>searchRes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newsContent.aspx.cs">
+      <DependentUpon>newsContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newsContent.aspx.designer.cs">
+      <DependentUpon>newsContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\备份categorymanager.aspx.cs">
+      <DependentUpon>备份categorymanager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\备份categorymanager.aspx.designer.cs">
+      <DependentUpon>备份categorymanager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="备份WebForm1.aspx.cs">
+      <DependentUpon>备份WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="备份WebForm1.aspx.designer.cs">
+      <DependentUpon>备份WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BLL\BLL.csproj">
+      <Project>{91ef9b9c-8865-4e1b-806a-16bc9107464b}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Model\Model.csproj">
+      <Project>{ba2cc8a2-31cf-4e76-befe-c384de5e36f1}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\categorymanager.aspx" />
+    <Content Include="admin\newsmanager.aspx" />
+    <Content Include="admin\addnews.aspx" />
+    <Content Include="control\NewsCategory.ascx" />
+    <Content Include="css\commen.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\manager_commen.css" />
+    <Content Include="error.html" />
+    <Content Include="image\error.gif" />
+    <Content Include="image\niunanlogo.jpg" />
+    <Content Include="image\round1.jpg" />
+    <Content Include="image\round1_bottom.gif" />
+    <Content Include="image\round1_middle.gif" />
+    <Content Include="image\round1_top.gif" />
+    <Content Include="image\round2.gif" />
+    <Content Include="image\round2_left_bottom.gif" />
+    <Content Include="image\round2_left_top.gif" />
+    <Content Include="image\round2_right_bottom.gif" />
+    <Content Include="image\round2_right_middle.gif" />
+    <Content Include="image\round2_right_top.gif" />
+    <Content Include="image\search.gif" />
+    <Content Include="image\tg029logo.gif" />
+    <Content Include="admin\Login.aspx" />
+    <Content Include="js\edittable.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="homePage.aspx" />
+    <Content Include="newsList.aspx" />
+    <Content Include="searchRes.aspx" />
+    <Content Include="newsContent.aspx" />
+    <Content Include="admin\备份categorymanager.aspx" />
+    <Content Include="备份WebForm1.aspx" />
+    <Content Include="common.Master" />
+    <Content Include="admin\m_common.master" />
+    <Content Include="handler\WaterMark.ashx" />
+    <Content Include="handler\ChangeCaName.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10698/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

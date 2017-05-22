@@ -1,0 +1,241 @@
+﻿/*
+   *创建人：琚建飞
+   *创建时间：2016年10月1日10:19:34
+   */
+
+* { /*“*”号代表通配符，匹配所有标签。把默认值都设置为0*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+}
+/*设置超链接的默认值*/
+a:link {
+    /*鼠标没有移上去的超链接的样式*/
+    color: #000; /*颜色*/
+    text-decoration: none; /*没有任何线条*/
+}
+
+a:hover {
+    /*鼠标移到超链接上的样式*/
+    color: #f00;
+    text-decoration: underline; /*有下划线*/
+}
+
+a:visited {
+    /*超链接访问后的样式*/
+    color: #000; /*颜色*/
+    text-decoration: none; /*没有任何线条*/
+}
+
+#top, #search, #main, #footer { /*公共样式*/
+    margin: 10px auto 10px auto; /*使盒子居中*/
+    width: 760px;
+}
+
+#top { /*顶部样式*/
+    height: 120px; /*解决了搜索栏和标题栏没有间距的问题*/
+}
+
+    #top img {
+        /*顶部图片样式*/
+        float: left; /*向左浮动，解决了块级元素换行的问题*/
+    }
+
+#search { /*搜索样式*/
+    clear: left; /*清空向左浮动*/
+    height: 27px; /*防止top默认为0的情况*/
+}
+
+#main { /*可变内容区域样式*/
+}
+
+#footer { /*尾部样式*/
+    text-align: center; /*内容居中*/
+    border-top: 1px solid #808080; /*顶部横线*/
+    padding-top: 5px; /*文字与横线的距离*/
+    clear:left;
+}
+
+.textbox { /*搜索关键字文本框样式*/
+    border: 1px solid #ff6a00;
+    background-color: #ffd800;
+    height: 25px;
+    width: 430px;
+    font: 20px; /*文本框中输入字体的大小*/
+    line-height: 25px; /*输入的文本垂直对齐*/
+}
+
+.searchbtn {
+    background-image:url("../image/search.gif");
+    width:98px;
+    height:27px;
+}
+input {
+    vertical-align: middle; /*是盒子中的控件居中显示*/
+}
+
+ul, li {
+    list-style-type: none; /*去除圆点*/
+}
+
+li {
+    text-align: center; /*文本居中*/
+    margin: 15px;
+}
+
+    li a:hover {
+        color: #f00; /*重载，鼠标移到超链接上，超链接变成红色*/
+    }
+
+    li a:link {
+        /*重载*/
+        /*分类名称样式*/
+        color: #0094ff;
+        text-decoration: underline; /*下划线*/
+        font-weight: bold; /*粗体*/
+    }
+
+.commonfrm {
+    /*框架公共样式*/
+    width: 560px;
+    border: 1px solid #DEDFDE;
+    float: left;
+}
+
+    .commonfrm h4 {
+        /*框架标题样式*/
+        color: #fff;
+        background: #0094ff;
+        padding: 3px 10px; /*如果只要两个值得话，第一个代表上下，第二个代表左右*/
+    }
+
+    .commonfrm table {
+        width: 100%; /*长宽度可以用百分比*/
+        text-align: center; /*文本居中*/
+        border: 1px solid #0094ff; /*所属类别，新闻标题，发布时间的表格线*/
+        border-collapse: collapse; /*细线表格*/
+    }
+
+        .commonfrm table th, .commonfrm table td {
+            border: 1px solid #0094ff; /*所属类别，新闻标题，发布时间的表格线*/
+            padding: 5px;
+        }
+
+    .commonfrm .th_category { /*两个类选择器，并列，中间加空格*/
+        width: 100px;
+    }
+
+    .commonfrm .th_time { /*两个类选择器，并列，中间加空格*/
+        width: 150px;
+    }
+
+    .commonfrm .td_category {
+        color: #0094ff;
+    }
+
+    .commonfrm .td_time {
+        color: #808080;
+        font-size: 12px;
+    }
+
+#category {
+    /*新闻分类的框架*/
+    width: 180px;
+    margin-right: 5px;
+    height: 364px;
+}
+
+#newnews {
+    /*最新新闻的框架*/
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+#hotnews {
+    /*热点新闻的框架*/
+    margin-left: 5px;
+}
+
+#newslist {
+    /*新闻列表框架*/
+    margin-left: 10px;
+}
+
+#searchres {
+    /*搜索结果框架*/
+    width: 760px;
+    margin-bottom: 10px;
+}
+
+#newscontent {
+    /*新闻内容框架*/
+    width: 760px;
+    margin-bottom: 10px;
+}
+
+    #newscontent p ,.replay p{
+        margin: 10px 20px; 
+    }
+
+    #newscontent .con {
+        text-indent: 2em; /*让段落首行缩进两个字符*/
+        line-height: 20px; /*行间距*/
+    }
+
+    #newscontent .con_time {
+        float: right;
+        font-size: 12px;
+        color: #808080;
+    }
+
+    #newscontent a:link, #newscontent a:visited {
+        background-color: #EFF7FF;
+        border: 1px solid #0066CC;
+        width: 70px;
+        height: 25px;
+        display: block;
+        font-size: 12px;
+        text-align: center; /*水平居中显示*/
+        line-height: 25px; /*垂直居中*/
+        margin-left: 5px;
+        color: #0059BD;
+        text-decoration: none; /*不生成任何线条*/
+    }
+
+#newsreply {
+    /*评论内容框架*/
+    width: 760px;
+    margin-bottom: 10px;
+}
+.replay {
+    margin-bottom:10px;
+}
+.replay hr{
+    width:650px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.replay_info {
+    text-align:right;
+}
+.addcomment {
+    /*发表评论*/
+    width:760px;
+    margin-bottom:10px;
+    text-align:center;
+    border:1px solid #D6D7D6;
+    background-color:#F7F7F7;
+    clear:both;/*清除全部浮动，解决了背景色占据评论框及以上的所有*/
+}
+    .addcomment .txtcode {
+        width:50px;
+    }
+    .addcomment .comment_con {
+       margin-bottom:5px;
+       margin-top:5px !important;/*非ie核心浏览器识别，important,提高优先级*/
+       *margin-top:10px !important;  /*添加*号，此规则仅ie6，7，8识别*/
+       _margin-top:10px !important; /*添加下划线，仅ie6识别*/
+    }
