@@ -13,21 +13,30 @@
     <div id="newslist" class="commonfrm">
         <h4>
             <asp:Label ID="lblCaName" runat="server" Text="　"></asp:Label></h4>
-        <asp:GridView ID="gvNews" runat="server" AutoGenerateColumns="False" BorderWidth="0" GridLines="None" EmptyDataText="该类别下暂无新闻！">
+        <asp:GridView ID="gvNews" runat="server" AutoGenerateColumns="False" BorderWidth="0px" GridLines="None" EmptyDataText="该类别下暂无新闻！">
             <Columns>
-                <asp:TemplateField HeaderText="所属类别" HeaderStyle-CssClass="th_category">
+                <asp:TemplateField HeaderText="所属分类" HeaderStyle-CssClass="th_category">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("name") %>'></asp:TextBox>
+                    </EditItemTemplate>
                     <ItemTemplate>
-                        <a class="td_category" href='newsList.aspx?caid=<%#Eval("caId") %>'>[<%#Eval("name") %>]</a>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("name") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="新闻标题">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("title") %>'></asp:TextBox>
+                    </EditItemTemplate>
                     <ItemTemplate>
-                        <a href='newsconConten.aspx?newsid=<%#Eval("id")%>' target="_blank" title='<%#Eval("title") %>'><%# StringTruncat(Eval("title").ToString(),18,"...") %></a>
+                        <asp:Label ID="Label2" runat="server" Text='<%# Bind("title") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="发布时间" HeaderStyle-CssClass="th_time" ItemStyle-CssClass="td_time">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("createTime") %>'></asp:TextBox>
+                    </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="Label3" runat="server" Text='<%# Bind("createtime") %>'></asp:Label>
+                        <asp:Label ID="Label3" runat="server" Text='<%# Bind("createTime") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
