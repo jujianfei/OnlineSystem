@@ -138,13 +138,6 @@
     <Compile Include="newsContent.aspx.designer.cs">
       <DependentUpon>newsContent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\备份categorymanager.aspx.cs">
-      <DependentUpon>备份categorymanager.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\备份categorymanager.aspx.designer.cs">
-      <DependentUpon>备份categorymanager.aspx</DependentUpon>
-    </Compile>
     <Compile Include="备份WebForm1.aspx.cs">
       <DependentUpon>备份WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -198,7 +191,6 @@
     <Content Include="newsList.aspx" />
     <Content Include="searchRes.aspx" />
     <Content Include="newsContent.aspx" />
-    <Content Include="admin\备份categorymanager.aspx" />
     <Content Include="备份WebForm1.aspx" />
     <Content Include="common.Master" />
     <Content Include="admin\m_common.master" />

@@ -35,16 +35,13 @@ namespace DAL
             return conn;
         }
         /// <summary>
-        /// 该方法执行执行不带参数的增删改SQL语句或存储过程
+        /// 该方法执行不带参数的增删改SQL语句或存储过程
         /// </summary>
         /// <param name="cmdText">增删改SQL语句或存储过程</param>
         /// <param name="ct">命令类型</param>
         /// <returns></returns>
         public  int ExecuteNonQuery(string cmdText,CommandType ct)
         {
-            //string connStr = @"server=DESKTOP-MQNAEUK;database=newssystem;uid=sa;pwd=jujianfei";
-            //SqlConnection conn = new SqlConnection(connStr);
-            //conn.Open();
             int res;
             try
             {
@@ -64,14 +61,10 @@ namespace DAL
                 }             
             }
             return res;
-            //SqlCommand cmd = new SqlCommand(sql,GetConn());
-            //int res=cmd.ExecuteNonQuery();
-            //conn.Close();
-            //return res;
         }
 
         /// <summary>
-        /// 执行带参数的SQL增删改语句或存储过程
+        /// 该方法执行带参数的SQL增删改语句或存储过程
         /// </summary>
         /// <param name="cmdText">SQL增删改语句或存储过程</param>
         /// <param name="paras"></param>
@@ -90,7 +83,7 @@ namespace DAL
         }
 
         /// <summary>
-        /// 该方法执行传入的SQL查询语句或存储过程
+        /// 该方法执行不带参数的SQL查询语句或存储过程
         /// </summary>
         /// <param name="sql">SQL查询语句或存储过程</param>
         ///  <param name="ct">命令类型</param>
@@ -98,22 +91,17 @@ namespace DAL
         public DataTable ExecuteQuery(string cmdText,CommandType ct)
         {
             DataTable dt = new DataTable();
-            //string connStr = @"server=DESKTOP-MQNAEUK;database=newssystem;uid=sa;pwd=jujianfei";
-            //SqlConnection conn = new SqlConnection(connStr);
-            //conn.Open();
             cmd = new SqlCommand(cmdText, GetConn());
             cmd.CommandType = ct;
             using (sdr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
             {
                 dt.Load(sdr);                
             }
-            //sdr.Close();
-            //conn.Close();
             return dt;
         }
 
        /// <summary>
-        /// 执行带参数的SQL查询语句或存储过程
+        /// 该方法执行带参数的SQL查询语句或存储过程
        /// </summary>
         /// <param name="cmdText">SQL查询语句或存储过程</param>
        /// <param name="paras">参数集合</param>
@@ -131,17 +119,5 @@ namespace DAL
             }
             return dt;
         }
-
-        //public DataTable test(string procName)
-        //{
-        //    DataTable dt = new DataTable();
-        //    cmd = new SqlCommand(procName, GetConn());
-        //    cmd.CommandType = CommandType.StoredProcedure;
-        //    using (sdr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
-        //    {
-        //        dt.Load(sdr);
-        //    }
-        //    return dt;
-        //}
     }
 }

@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminManager.cs" />
     <Compile Include="CategoryManager.cs" />
     <Compile Include="CommentManager.cs" />
     <Compile Include="LoginManager.cs" />

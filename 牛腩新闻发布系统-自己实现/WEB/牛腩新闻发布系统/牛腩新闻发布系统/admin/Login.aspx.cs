@@ -31,15 +31,18 @@ namespace 牛腩新闻发布系统
             string name = txtUserName.Text.Trim();
             string pwd = txtPassword.Text.Trim();
 
-            bool b=LoginManager.Login(name,pwd);
+            bool b = AdminManager.Login(name,pwd);
             if (b)
             {
                 //登录成功，跳转到categorymanager.aspx页面
                 Session["admin"] = name;
+                Session["pwd"] = pwd;
+                Model.Admin.uid = name;
+                Model.Admin.pwd = pwd;
                 Response.Redirect("categorymanager.aspx");
             }
             else
-            {
+            { 
                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script language='javascript' defer>alert('登录失败，用户名或者密码错误！');</script>");
             }
         }     

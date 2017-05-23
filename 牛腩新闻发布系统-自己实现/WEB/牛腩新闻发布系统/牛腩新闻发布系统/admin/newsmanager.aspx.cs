@@ -17,7 +17,7 @@ namespace 牛腩新闻发布系统.admin
         protected void Page_Load(object sender, EventArgs e)
         {
             // 判断session里面是否存在管理员
-            if (Session["admin"] != null && Session["admin"].ToString() == "jujianfei")
+            if (Session["admin"] != null && Session["admin"].ToString() == Model.Admin.uid && Session["pwd"].ToString() == Model.Admin.pwd)
             {
                 // 已登陆
                 if (!Page.IsPostBack)
