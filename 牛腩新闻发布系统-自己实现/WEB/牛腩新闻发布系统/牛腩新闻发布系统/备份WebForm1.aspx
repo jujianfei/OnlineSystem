@@ -11,8 +11,8 @@
 <body>
     <form id="form1" runat="server">
         <div id="top">
-            <a href="WebForm1.aspx">
-                <img src="image/niunanlogo.jpg" /></a>
+            <a href="homepage.aspx">
+                <img src="image/logo2.png" /></a>
             <!--超链接到首页-->
             <a href="https://www.baidu.com/" target="_blank">
                 <img src="image/tg029logo.gif" /></a>

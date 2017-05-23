@@ -173,6 +173,7 @@
     <Content Include="css\manager_commen.css" />
     <Content Include="error.html" />
     <Content Include="image\error.gif" />
+    <Content Include="image\logo2.png" />
     <Content Include="image\niunanlogo.jpg" />
     <Content Include="image\round1.jpg" />
     <Content Include="image\round1_bottom.gif" />
@@ -187,6 +188,7 @@
     <Content Include="image\search.gif" />
     <Content Include="image\tg029logo.gif" />
     <Content Include="admin\Login.aspx" />
+    <Content Include="image\title8.jpg" />
     <Content Include="js\edittable.js" />
     <Content Include="js\jquery.js" />
     <Content Include="Web.config">

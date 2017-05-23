@@ -19,3 +19,10 @@ C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\DAL\bin\Debug\Model.p
 C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\DAL\obj\Debug\DAL.dll
 C:\Users\琚\Desktop\牛腩新闻发布系统-自己实现\DAL\obj\Debug\DAL.pdb
+C:\Users\琚\Desktop\OnlineSystem\牛腩新闻发布系统-自己实现\DAL\bin\Debug\DAL.dll
+C:\Users\琚\Desktop\OnlineSystem\牛腩新闻发布系统-自己实现\DAL\bin\Debug\DAL.pdb
+C:\Users\琚\Desktop\OnlineSystem\牛腩新闻发布系统-自己实现\DAL\bin\Debug\Model.dll
+C:\Users\琚\Desktop\OnlineSystem\牛腩新闻发布系统-自己实现\DAL\bin\Debug\Model.pdb
+C:\Users\琚\Desktop\OnlineSystem\牛腩新闻发布系统-自己实现\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\琚\Desktop\OnlineSystem\牛腩新闻发布系统-自己实现\DAL\obj\Debug\DAL.dll
+C:\Users\琚\Desktop\OnlineSystem\牛腩新闻发布系统-自己实现\DAL\obj\Debug\DAL.pdb

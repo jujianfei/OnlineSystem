@@ -12,7 +12,7 @@
                         <a class="td_category" href='newsList.aspx?caid=<%#Eval("caId") %>'>[<%#Eval("name") %>]</a>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="新闻标题">
+                <asp:TemplateField HeaderText="资源标题">
                     <ItemTemplate>
                         <a href='newsconConten.aspx?newsid=<%#Eval("id")%>' target="_blank" title='<%#Eval("title") %>'><%# StringTruncat(Eval("title").ToString(),18,"...") %></a>
                     </ItemTemplate>

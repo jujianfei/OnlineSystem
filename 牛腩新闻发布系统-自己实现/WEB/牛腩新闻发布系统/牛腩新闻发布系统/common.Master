@@ -15,11 +15,11 @@
 <body>
     <form id="form1" runat="server">
         <div id="top">
-            <a href="WebForm1.aspx">
-                <img src="image/niunanlogo.jpg" runat="server"/></a>
+            <a href="homePage.aspx">
+                <img src="image/logo2.png" runat="server"/></a>
             <!--超链接到首页-->
             <a href="https://www.baidu.com/" target="_blank">
-                <img src="image/tg029logo.gif" runat="server"/></a>
+                <img src="image/title8.jpg" runat="server"/></a>
         </div>
         <div id="search">
             搜索条件：

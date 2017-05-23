@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="M_ContentPlaceHolder" runat="server">
     <div id="ca_manager" class="round2">
-        <h3>类别管理</h3>
+        <h3>资源管理</h3>
         <div class="con">
             <div class="fontcolor">提示：点击新闻标题后，可进行对该新闻评论的删除</div>
             <table class="m_table">

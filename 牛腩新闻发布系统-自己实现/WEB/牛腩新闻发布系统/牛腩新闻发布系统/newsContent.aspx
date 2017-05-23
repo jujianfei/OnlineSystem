@@ -20,9 +20,9 @@
         <a href="#com">我要评论</a>
     </div>
     <div id="newsreply" class="commonfrm">
-        <h4>新闻评论</h4>
+        <h4>资源评论</h4>
         <div id="emptydata" class="replay" runat="server">
-            <p>该新闻目前暂无评论！</p>
+            <p>该资源目前暂无评论！</p>
         </div>
         <asp:Repeater ID="repComment" runat="server" OnItemDataBound="repComment_ItemDataBound">
             <ItemTemplate>
@@ -41,6 +41,7 @@
     <div class="addcomment">
         <asp:TextBox ValidationGroup="pinlun" ID="txtComment" runat="server" TextMode="MultiLine" Text="请在此输入评论内容!" Height="250" Width="600" CssClass="comment_con" onclick="this.select()"></asp:TextBox>
         <p>
+            <!--随机获得一般处理程序中的四个元素，用于验证码内容的填充-->
             验证码：<a name="com">&nbsp;</a><img src="handler/WaterMark.ashx" id="vimg" alt="" onclick="changeCode()" />
             <asp:TextBox ID="txtCode" runat="server" ValidationGroup="pinlun" CssClass="txtcode"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="pinlun" ControlToValidate="txtCode" runat="server" ErrorMessage="请输入验证码！" Text="*"></asp:RequiredFieldValidator>

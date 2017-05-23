@@ -111,7 +111,6 @@ namespace DAL
             n.CaId = dt.Rows[0]["caId"].ToString();
             return n;
         }
-
         #endregion
 
         #region 根据标题搜索新闻

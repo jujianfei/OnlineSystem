@@ -5,7 +5,7 @@
     --%>
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="NewsCategory.ascx.cs" Inherits="牛腩新闻发布系统.control.NewsCategory" %>
 <div id="category" class="commonfrm">
-        <h4>新闻分类</h4>
+        <h4>资源分类</h4>
         <ul>
             <!--前面的黑点-->
             <li><a href="homePage.aspx">首　　页</a></li>
