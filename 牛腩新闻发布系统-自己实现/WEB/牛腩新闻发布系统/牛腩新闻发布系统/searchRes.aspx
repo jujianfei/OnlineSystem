@@ -14,7 +14,7 @@
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="资源标题">
                     <ItemTemplate>
-                        <a href='newsconConten.aspx?newsid=<%#Eval("id")%>' target="_blank" title='<%#Eval("title") %>'><%# StringTruncat(Eval("title").ToString(),18,"...") %></a>
+                        <a href='newsContent.aspx?newsid=<%#Eval("id")%>' target="_blank" title='<%#Eval("title") %>'><%# StringTruncat(Eval("title").ToString(),18,"...") %></a>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="发布时间" HeaderStyle-CssClass="th_time" ItemStyle-CssClass="td_time">

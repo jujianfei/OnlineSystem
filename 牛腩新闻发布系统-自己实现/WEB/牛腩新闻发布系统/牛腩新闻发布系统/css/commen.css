@@ -55,7 +55,6 @@ a:visited {
 }
 
 #footer { /*尾部样式*/
-    margin-top:430px;
     text-align: center; /*内容居中*/
     border-top: 1px solid #808080; /*顶部横线*/
     padding-top: 5px; /*文字与横线的距离*/

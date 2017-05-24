@@ -28,7 +28,6 @@
             <!--内容前加一个空格，调整单选按钮和文本之间的距离-->
             <asp:TextBox ID="txtKey" runat="server" CssClass="textbox"></asp:TextBox><!--CssClass属性，看CSS文件里面的txtbox标记-->
             <asp:Button ID="btn" UseSubmitBehavior="false" runat="server" Text="" CssClass="searchbtn" OnClick="btn_Click" />
-
         </div>
         <div id="main">
             <!--保证其他的框架在main下面，以main框架为基本-->
