@@ -60,6 +60,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\modnews.aspx.cs">
+      <DependentUpon>modnews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\modnews.aspx.designer.cs">
+      <DependentUpon>modnews.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\m_common.master.cs">
       <DependentUpon>m_common.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -158,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\categorymanager.aspx" />
+    <Content Include="admin\modnews.aspx" />
     <Content Include="admin\newsmanager.aspx" />
     <Content Include="admin\addnews.aspx" />
     <Content Include="control\NewsCategory.ascx" />

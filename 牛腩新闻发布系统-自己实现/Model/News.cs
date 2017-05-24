@@ -66,4 +66,11 @@
             this.title = title;
             this.caId = caId;
         }
+        public News(string id,string title, string content, string caId)
+        {
+            this.id = id;
+            this.content = content;
+            this.title = title;
+            this.caId = caId;
+        }
     }
