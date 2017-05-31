@@ -33,7 +33,7 @@
             <hr class="hr15">
             <input id="password" name="password" id="password" placeholder="密码" required="" type="password">
             <hr class="hr15">
-            <input value="登录" style="width: 100%;" type="button" onclick="test()">
+            <input id="login" value="登录" style="width: 100%;" type="button" onclick="test()" onmousemove="this.style.backgroundColor='#990033';" onmouseout="this.style.backgroundColor='';">
             <hr class="hr20">
             <!-- 帮助 <a onClick="alert('请联系管理员')">忘记密码</a> -->
         </form>
@@ -42,25 +42,35 @@
     <div class="copyright">© 2017GD在线学习平台 by <a href="http://www.mycodes.net/" target="_blank">琚建飞</a></div>
     <script type="text/javascript">
         function test() {
-            var trArr = [];
             var a = document.getElementById("userName").value;
             var b = document.getElementById("password").value;
-            $.ajax({
-                type: "POST",
-                url: "Login.aspx/hite",
+            if (a == "")
+            {
+                alert("请输入用户名！");
+                document.getElementById("userName").focus();
+            }
+            else if (b == "") {
+                alert("请输入密码！");
+                document.getElementById("password").focus();
+            }
+            else {
+                $.ajax({
+                    type: "POST",
+                    url: "Login.aspx/hite",
 
-                data: "{a:'" + a + "',b:'" + b + "'}",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (result) {
-                    var c = result.d;
-                    if (c == "登录失败！") {
-                        alert(result.d);
-                    } else {
-                        window.location.href = "http://localhost:10698/homePage.aspx";
+                    data: "{a:'" + a + "',b:'" + b + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        var c = result.d;
+                        if (c == "登录失败！") {
+                            alert(result.d);
+                        } else {
+                            window.location.href = "http://localhost:10698/homePage.aspx";
+                        }
                     }
-                }
-            });
+                });
+            }
         }
     </script>
 </body>

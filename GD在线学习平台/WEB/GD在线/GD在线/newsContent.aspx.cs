@@ -16,7 +16,7 @@ namespace GD在线学习平台
         {
             if (!Page.IsPostBack)
             {
-                string newsid=Request.QueryString["newsid"];
+                string newsid = Request.QueryString["newsid"];
                 NewsManager nm = new NewsManager();
                 News news = nm.SelectById(newsid);
 
@@ -27,7 +27,7 @@ namespace GD在线学习平台
 
                 //绑定资源评论
                 DataTable dt = new CommentManager().SelectByNewsId(newsid);
-                if (dt.Rows.Count==0)
+                if (dt.Rows.Count == 0)
                 {
                     //无资源评论
                     emptydata.Visible = true;
@@ -36,7 +36,7 @@ namespace GD在线学习平台
                 {
                     //有资源评论
                     emptydata.Visible = false;
-                    repComment.DataSource=dt;
+                    repComment.DataSource = dt;
                     repComment.DataBind();
                 }
                 repComment.DataSource = new CommentManager().SelectByNewsId(newsid);
@@ -85,7 +85,7 @@ namespace GD在线学习平台
             //判断验证码是否输入正确
             string code = txtCode.Text.Trim().ToUpper();
             string rightCode = Session["Code"].ToString();
-            if (code!=rightCode)
+            if (code != rightCode)
             {
                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script language='javascript' defer>alert('验证码输入错误！');</script>");//提示框，且背景不变白
                 return;
@@ -104,7 +104,7 @@ namespace GD在线学习平台
                 txtCode.Text = "";
 
                 //隐藏“该资源目前暂无评论！”
-                emptydata.Visible=false;
+                emptydata.Visible = false;
 
                 //重新绑定资源类别
                 repComment.DataSource = new CommentManager().SelectByNewsId(newsid);
@@ -114,6 +114,7 @@ namespace GD在线学习平台
             {
                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script language='javascript' defer>alert('添加失败，请联系管理员！');</script>");
             }
+
         }
 
         // 根据session的值显示或者隐藏删除评论的按钮

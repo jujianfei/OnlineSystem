@@ -26,7 +26,6 @@ namespace GD在线学习平台
                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script language='javascript' defer>alert('验证码输入错误！');</script>");//提示框，且背景不变白
                 return;
             }
-
             //获取输入的数据
             string name = txtUserName.Text.Trim();
             string pwd = txtPassword.Text.Trim();

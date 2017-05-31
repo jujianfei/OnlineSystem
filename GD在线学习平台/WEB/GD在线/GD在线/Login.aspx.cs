@@ -19,19 +19,24 @@ namespace GD在线
         [WebMethod]
         public static string hite(string a, string b)
         {
+            //将用户登录信息写到Session中
+            HttpContext.Current.Session["username"] = a;
+            HttpContext.Current.Session["userpassword"] = b;
             SqlConnection conn = new SqlConnection("server=.;database=NewsSystem;uid=sa;pwd=jujianfei");
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "select userName,userPassword from UserManager where userName='" + a + "' And userPassword='" + b + "'";
             cmd.Connection = conn;
             conn.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.HasRows)
+            using (SqlDataReader dr = cmd.ExecuteReader())
             {
-                return "登录成功！";
-            }
-            else
-            {
-                return "登录失败！";
+                if (dr.HasRows)
+                {
+                    return "登录成功！";
+                }
+                else
+                {
+                    return "登录失败！";
+                }
             }
         }
     }
