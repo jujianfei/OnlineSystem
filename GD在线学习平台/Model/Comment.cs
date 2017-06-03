@@ -28,14 +28,14 @@
             set { centent = value; }
         }
 
-        private string userIp;
+        private int userId;
         /// <summary>
-        /// 评论人ip
+        /// 评论人id
         /// </summary>
-        public string UserIp
+        public int UserId
         {
-            get { return userIp; }
-            set { userIp = value; }
+            get { return userId; }
+            set { userId = value; }
         }
 
         private string creatTime;
@@ -61,10 +61,10 @@
         public Comment()
         { }
 
-        public Comment(string content,string userIp,string newsId)
+        public Comment(string content,int userId,string newsId)
         {
             this.centent = content;
-            this.userIp = userIp;
+            this.userId = userId;
             this.newsId = newsId;
         }
     }

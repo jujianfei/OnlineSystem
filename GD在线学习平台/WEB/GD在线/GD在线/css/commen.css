@@ -37,7 +37,7 @@ a:visited {
 
 #top { /*顶部样式*/
     height: 120px; /*解决了搜索栏和标题栏没有间距的问题*/
-    margin-top:20px;
+    margin-top:40px;
 }
 
     #top img {
@@ -52,6 +52,7 @@ a:visited {
 }
 
 #main { /*可变内容区域样式*/
+        
 }
 
 #footer { /*尾部样式*/

@@ -94,8 +94,9 @@ namespace GD在线学习平台
             //添加进数据库
             string com_content = txtComment.Text;//获取资源评论
             string newsid = Request.QueryString["newsid"];
-            string userIp = Request.ServerVariables["REMOTE_ADDR"]; //获取访问者ip地址
-            Comment com = new Comment(com_content, userIp, newsid);
+            int userId = Model.GoAnyWhere.id;
+            
+            Comment com = new Comment(com_content, userId, newsid);
             bool b = new CommentManager().Insert(com);
             if (b)
             {

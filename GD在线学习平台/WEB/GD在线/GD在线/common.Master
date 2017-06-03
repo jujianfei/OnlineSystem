@@ -11,15 +11,29 @@
     <script src="../js/edittable.js" type="text/javascript"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        //获取登录者的信息
+        $(document).ready(function () {
+            jjf.innerText = "<%=uid %>";
+        });
+    </script>
+
 </head>
-<body>
+<body style="background-color: #F6F6F6">
+    <%-- 页面最上面的一条，固定栏 --%>
+    <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: #48525E; text-align: right; color: red; height: 30px; line-height: 30px;">
+        <label id="zhece" style="color: red; height: 30px;"><a href="Login.aspx">登录</a>|<a href="Login.aspx">注册</a></label>　　
+        目前登录用户为：
+        <label id="jjf" style="margin-right: 40px;">琚建飞</label>
+    </div>
+
     <form id="form1" runat="server">
         <div id="top">
             <a href="homePage.aspx">
-                <img src="image/logo2.png" runat="server"/></a>
+                <img src="image/logo2.png" style="width: 160px; height: 120px;" runat="server" /></a>
             <!--超链接到首页-->
             <a href="https://www.baidu.com/" target="_blank">
-                <img src="image/title8.jpg" runat="server"/></a>
+                <img src="image/title8.jpg" runat="server" /></a>
         </div>
         <div id="search">
             搜索条件：
@@ -38,5 +52,6 @@
             版权所有  &copy;<a href="http://blog.csdn.net/gnd15732625435?viewmode=contents" target="_blank">琚建飞</a>&amp;<a href="https://www.baidu.com/" target="_blank">百度网</a>
         </div>
     </form>
+
 </body>
 </html>

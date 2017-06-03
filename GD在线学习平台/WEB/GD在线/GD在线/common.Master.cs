@@ -9,9 +9,17 @@ namespace GD在线学习平台
 {
     public partial class common : System.Web.UI.MasterPage
     {
+        protected string uid ;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Model.GoAnyWhere.uid==null)
+            {
+                uid = "未登录";
+            }
+            else
+            {
+                uid = Model.GoAnyWhere.uid;
+            }
         }
 
         //搜索按钮

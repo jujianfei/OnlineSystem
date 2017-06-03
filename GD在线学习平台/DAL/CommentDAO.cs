@@ -31,7 +31,7 @@ namespace DAL
         public DataTable SelectByNewsId(string newsId)
         {
             DataTable dt = new DataTable();
-            string sql = "select * from comment where newsId=@newsId order by createTime desc";
+            string sql = "select c.id, c.createTime,c.content,u.userName  from comment c join UserManager u on c.userId=u.id where newsId=@newsId order by createTime desc";
             SqlParameter[] paras = new SqlParameter[]
             {
                 new SqlParameter("@newsId",newsId)
@@ -50,11 +50,11 @@ namespace DAL
         public bool Insert(Comment c)
         {
             bool flag = false;
-            string sql = "insert into comment ([content],userIp,newsId) values(@content,@userIp,@newsId)";
+            string sql = "insert into comment ([content],userId,newsId) values(@content,@userId,@newsId)";
             SqlParameter[] paras = new SqlParameter[]
             {
                 new SqlParameter("@content",c.Centent),
-                new SqlParameter("@userIp",c.UserIp),
+                new SqlParameter("@userId",c.UserId),
                 new SqlParameter("@newsId",c.NewsId)
             };
             int res = sqlhelper.ExecuteNonQuery(sql,paras,CommandType.Text);

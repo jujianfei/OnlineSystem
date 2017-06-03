@@ -40,7 +40,17 @@
     </div>
 
     <div class="copyright">© 2017GD在线学习平台 by <a href="http://www.mycodes.net/" target="_blank">琚建飞</a></div>
+
     <script type="text/javascript">
+        document.onkeydown = keyListener;
+
+        function keyListener(e) {
+            //  当按下回车键，执行我们的代码  
+            if (e.keyCode == 13) {
+                test();
+            }
+        }
+
         function test() {
             var a = document.getElementById("userName").value;
             var b = document.getElementById("password").value;
