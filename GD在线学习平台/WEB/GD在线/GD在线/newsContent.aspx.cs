@@ -90,6 +90,12 @@ namespace GD在线学习平台
                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script language='javascript' defer>alert('验证码输入错误！');</script>");//提示框，且背景不变白
                 return;
             }
+            //判断用户是否登录
+            if (Model.GoAnyWhere.uid==null)
+            {
+                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script language='javascript' defer>alert('请登录后方可评论！');</script>");//提示框，且背景不变白
+                 return;
+            }
 
             //添加进数据库
             string com_content = txtComment.Text;//获取资源评论

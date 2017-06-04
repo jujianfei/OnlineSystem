@@ -1,7 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="common.master.cs" Inherits="GD在线学习平台.common" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,6 +8,10 @@
     <link href="css/commen.css" rel="stylesheet" />
     <script src="../js/jquery.js" type="text/javascript"></script>
     <script src="../js/edittable.js" type="text/javascript"></script>
+
+    <link href="css/zhuce.css" rel="stylesheet" />
+    <script src="js/zhcece2.js"></script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <script type="text/javascript">
@@ -17,14 +20,72 @@
             jjf.innerText = "<%=uid %>";
         });
     </script>
+    <script type="text/javascript">
+        function test() {
+            var a = document.getElementById("u").value;
+            var b = document.getElementById("p").value;
+            $.ajax({
+                type: "POST",
+                url: "Login.aspx/hite2",
 
+                data: "{a:'" + a + "',b:'" + b + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.d == "注册成功！") {
+                        alert(result.d);
+                        hideDialog();//注册框隐藏
+                        window.location.href = "http://localhost:10698/Login.aspx";//跳转到登录页
+                    }
+                }
+            });
+        }
+        function myfun() {
+            if (document.getElementById("jjf").innerText != "未登录") {
+                document.getElementById("zhuce").style.display = "none";
+            }
+            else {
+                document.getElementById("jjf").style.display = "none"; 
+                document.getElementById("tishi").style.display = "none";
+                document.getElementById("tuichu").style.display = "none";
+            }
+        }
+        window.onload = myfun;
+        //重新加载主页
+        function reload() {
+            var a = "<%=modify()%>";
+            alert(a);
+            window.location.href = "http://localhost:10698/homePage.aspx";
+        }
+</script>
 </head>
 <body style="background-color: #F6F6F6">
     <%-- 页面最上面的一条，固定栏 --%>
     <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: #48525E; text-align: right; color: red; height: 30px; line-height: 30px;">
-        <label id="zhece" style="color: red; height: 30px;"><a href="Login.aspx">登录</a>|<a href="Login.aspx">注册</a></label>　　
-        目前登录用户为：
-        <label id="jjf" style="margin-right: 40px;">琚建飞</label>
+        <label id="zhuce" style="color: red; height: 30px;margin-right:200px;"><a href="Login.aspx">登录</a>|<a href="javascript:showDialog();">注册</a></label>
+        <label id="tishi">目前登录用户为：</label>
+        <label id="jjf" style="margin-right: 40px;">null</label>
+        <label id="tuichu" style="margin-right:10px;"><a href="javascript:reload();">退出登录</a></label>
+    </div>
+
+    <div class="ui-mask" id="mask" onselectstart="return false"></div>
+    <div class="ui-dialog" id="dialogMove" onselectstart='return false;'>
+        <div class="ui-dialog-title" id="dialogDrag" onselectstart="return false;">
+            用户注册
+		<a class="ui-dialog-closebutton" href="javascript:hideDialog();"></a>
+        </div>
+        <div class="ui-dialog-content">
+            <div class="ui-dialog-l40 ui-dialog-pt15">
+                <input id="u" class="ui-dialog-input ui-dialog-input-username" type="text" placeholder="手机/邮箱/用户名" />
+            </div>
+            <div class="ui-dialog-l40 ui-dialog-pt15">
+                <input id="p" class="ui-dialog-input ui-dialog-input-password" type="text" placeholder="密码" />
+            </div>
+            <br>
+            <div>
+                <input class="ui-dialog-submit" onclick="test()" type="button" value="注册">
+            </div>
+        </div>
     </div>
 
     <form id="form1" runat="server">

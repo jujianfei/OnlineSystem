@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Services;
+using System.Configuration;
 
 namespace GD在线
 {
@@ -15,11 +16,10 @@ namespace GD在线
         {
 
         }
-
+     
         [WebMethod]
         public static string hite(string a, string b)
         {
-            
             SqlConnection conn = new SqlConnection("server=.;database=NewsSystem;uid=sa;pwd=jujianfei");
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "select id, userName,userPassword from UserManager where userName='" + a + "' And userPassword='" + b + "'";
@@ -42,5 +42,32 @@ namespace GD在线
                 }
             }
         }
+
+        [WebMethod]
+        public static string hite2(string a, string b)
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
+            SqlConnection conn = new SqlConnection(connStr);
+            string sql = "insert into UserManager(userName,userPassword) values(@name,@pwd)";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlParameter[] spa = new SqlParameter[] { 
+                 new SqlParameter("@name",a),
+                 new SqlParameter("@pwd",b)
+            };
+            cmd.Parameters.AddRange(spa);
+            conn.Open();
+            int dr = cmd.ExecuteNonQuery();
+            if (dr > 0)
+            {
+                conn.Close();
+                return "注册成功！";
+            }
+            else
+            {
+                conn.Close();
+                return "注册失败，请联系管理员！";
+            }
+        }
+
     }
 }

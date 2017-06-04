@@ -8,7 +8,7 @@
         <h4>资源分类</h4>
         <ul>
             <!--前面的黑点-->
-            <li><a href="homePage.aspx">首　　页</a></li>
+            <li><a href="homePage.aspx">首　　　页</a></li>
             <!--里面a标记的标记的样式优先于li标记的样式，首页中间用全角空格-->
             <asp:Repeater ID="repCategory" runat="server">
                 <ItemTemplate>

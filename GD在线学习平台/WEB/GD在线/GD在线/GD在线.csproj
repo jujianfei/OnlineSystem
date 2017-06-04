@@ -173,9 +173,15 @@
     <Content Include="css\login.css" />
     <Content Include="css\login2.css" />
     <Content Include="css\manager_commen.css" />
+    <Content Include="css\zhuce.css" />
     <Content Include="image\aiwrap.png" />
+    <Content Include="image\close_def.png" />
+    <Content Include="image\close_hov.png" />
+    <Content Include="image\input_password.png" />
+    <Content Include="image\input_username.png" />
     <Content Include="image\web_login_bg.jpg" />
     <Content Include="js\jquery-1.7.1.min.js" />
+    <Content Include="js\zhcece2.js" />
     <Content Include="Login.aspx" />
     <Content Include="error.html" />
     <Content Include="image\error.gif" />
