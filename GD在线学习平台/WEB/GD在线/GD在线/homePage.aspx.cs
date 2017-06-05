@@ -60,12 +60,6 @@ namespace GD在线学习平台
             }
             return oldStr;
         }
-        [WebMethod(EnableSession = true)]
-        public static string modify()
-        {
-            HttpContext.Current.Session["username"] = null;
-            return "退出成功！";
-        }
 
     }
 }

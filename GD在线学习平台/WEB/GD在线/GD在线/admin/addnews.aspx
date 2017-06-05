@@ -10,10 +10,10 @@
             <p>资源内容：</p>
             <p>
                 <%--<asp:TextBox ID="txtContent" runat="server" TextMode="MultiLine" CssClass="newscontent"></asp:TextBox>--%>
-                <FTB:FreeTextBox ID="ftbContent" Text="请在此输入新添加内容！" Language="zh-CN" width="500" Height="200" runat="server" >
+                <FTB:FreeTextBox ID="ftbContent" Text="请在此输入新添加内容！" Language="zh-CN" width="500" Height="180" runat="server">
                 </FTB:FreeTextBox>
             </p>
-            <p>
+            <p style="margin-right:10px;">
                 <asp:Button ID="btnAdd" runat="server" Text="添加资源" OnClick="btnAdd_Click" />
             </p>
         </div>

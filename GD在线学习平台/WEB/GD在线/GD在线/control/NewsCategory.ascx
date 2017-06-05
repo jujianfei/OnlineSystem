@@ -4,7 +4,7 @@
     *版权所有：信息技术提高班
     --%>
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="NewsCategory.ascx.cs" Inherits="GD在线学习平台.control.NewsCategory" %>
-<div id="category" class="commonfrm">
+<div id="category" class="commonfrm" style="height:425px;margin-bottom:10px;">
         <h4>资源分类</h4>
         <ul>
             <!--前面的黑点-->
@@ -17,5 +17,6 @@
                     <!--#Eval（“name”），绑定数据库中数据-->
                 </ItemTemplate>
             </asp:Repeater>
+            <li><a href="noticeContent.aspx">公　　　告</a></li>
         </ul>
     </div>

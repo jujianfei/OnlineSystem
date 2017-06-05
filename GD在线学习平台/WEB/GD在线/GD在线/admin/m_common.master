@@ -10,6 +10,7 @@
             <p><a href="categorymanager.aspx">类别管理</a></p>
             <p><a href="newsmanager.aspx">资源管理</a></p>
             <p><a href="addnews.aspx">添加资源</a></p>
+            <p><a href="addNotice.aspx">添加公告</a></p>
         </div>
         <div class="footer">
             <p>&nbsp;</p>

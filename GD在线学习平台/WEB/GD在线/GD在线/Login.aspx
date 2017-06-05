@@ -7,17 +7,6 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>前台登录</title>
-    <%--<script language="javascript">
-        function toopen() {
-            if (document.getElementById("password").value == "123456") {
-                document.forms[0].action = "homePage.aspx";
-                return true;
-            } else {
-                alert("密码不正确！")
-                return false;
-            }
-        }
-    </script>--%>
     <script src="js/jquery-1.7.1.min.js"></script>
     <link href="css/login2.css" rel="stylesheet" />
 </head>

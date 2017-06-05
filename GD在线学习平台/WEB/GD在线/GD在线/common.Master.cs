@@ -19,6 +19,10 @@ namespace GD在线学习平台
             {
                 uid = HttpContext.Current.Session["username"].ToString();
             }
+            else if (Session["admin"]!=null)
+            {
+                uid = Session["admin"].ToString();
+            }
             else
             {
                 uid = "未登录";

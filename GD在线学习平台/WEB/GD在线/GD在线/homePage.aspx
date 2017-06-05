@@ -18,6 +18,7 @@
                         <!--利用Eval函数获取点击的类别ID-->
                         <a class="td_category" href='newsList.aspx?caid=<%#Eval("caId") %>'>[<%#Eval("name") %>]</a>
                     </ItemTemplate>
+                    
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="资源标题"> 
                     <ItemTemplate>

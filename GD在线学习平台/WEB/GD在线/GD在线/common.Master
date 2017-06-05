@@ -17,7 +17,7 @@
     <script type="text/javascript">
         //获取登录者的信息
         $(document).ready(function () {
-            jjf.innerText = "<%=uid %>";
+            jjf.innerText = "<%=uid%>";
         });
     </script>
     <script type="text/javascript">

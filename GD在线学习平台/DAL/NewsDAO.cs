@@ -33,7 +33,7 @@ namespace DAL
         public DataTable SelectAll()
         {
             DataTable dt = new DataTable();
-            string sql = "select * from news";
+            string sql = "select * from Data";
             dt = new SQLHelper().ExecuteQuery(sql, CommandType.Text);
             return dt;
         }

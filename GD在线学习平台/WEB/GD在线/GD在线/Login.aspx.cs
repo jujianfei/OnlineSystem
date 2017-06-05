@@ -21,7 +21,7 @@ namespace GD在线
         public static string hite(string a, string b)
         {
 
-            SqlConnection conn = new SqlConnection("server=.;database=NewsSystem;uid=sa;pwd=jujianfei");
+            SqlConnection conn = new SqlConnection("server=.;database=GDOnline;uid=sa;pwd=jujianfei");
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "select id, userName,userPassword from UserManager where userName='" + a + "' And userPassword='" + b + "'";
             cmd.Connection = conn;
@@ -70,12 +70,5 @@ namespace GD在线
                 return "注册失败，请联系管理员！";
             }
         }
-        [WebMethod(EnableSession = true)]
-        public static string modify()
-        {
-            HttpContext.Current.Session["username"] = null;
-            return "退出成功！";
-        }
-
     }
 }
