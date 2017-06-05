@@ -15,13 +15,13 @@ namespace GD在线学习平台
         protected string uid;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Model.GoAnyWhere.uid == null)
+            if (HttpContext.Current.Session["username"] != null)
             {
-                uid = "未登录";
+                uid = HttpContext.Current.Session["username"].ToString();
             }
             else
             {
-                uid = Model.GoAnyWhere.uid;
+                uid = "未登录";
             }
         }
 
@@ -37,8 +37,25 @@ namespace GD在线学习平台
 
         public static string modify()
         {
-            Model.GoAnyWhere.uid = null;
-            return "成功！";
+            HttpContext.Current.Session["username"] = null;
+            return "退出成功！";
+        }
+        [WebMethod]
+        public static string ShowValue()
+        {
+            HttpContext.Current.Session["username"] = null;
+            return "退出成功！";
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            HttpContext.Current.Session["username"] = null;
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            HttpContext.Current.Session["username"] = null;
+            Response.Redirect("homePage.aspx");
         }
     }
 }

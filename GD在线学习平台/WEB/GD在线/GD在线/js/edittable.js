@@ -86,7 +86,6 @@ $(function() {    // 相当于在页面中的body标签加上onload事件
     });
 });
 
-
 // 屏蔽Enter按键
 $(document).keydown(function(event) {
     switch (event.keyCode) {

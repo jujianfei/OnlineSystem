@@ -43,52 +43,44 @@
         function myfun() {
             if (document.getElementById("jjf").innerText != "未登录") {
                 document.getElementById("zhuce").style.display = "none";
-            }
-            else {
-                document.getElementById("jjf").style.display = "none"; 
-                document.getElementById("tishi").style.display = "none";
-                document.getElementById("tuichu").style.display = "none";
+                document.getElementById("jjf").style.display = "";
+                document.getElementById("tishi").style.display = "";
             }
         }
         window.onload = myfun;
-        //重新加载主页
-        function reload() {
-            var a = "<%=modify()%>";
-            alert(a);
-            window.location.href = "http://localhost:10698/homePage.aspx";
-        }
-</script>
+    </script>
 </head>
 <body style="background-color: #F6F6F6">
     <%-- 页面最上面的一条，固定栏 --%>
-    <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: #48525E; text-align: right; color: red; height: 30px; line-height: 30px;">
-        <label id="zhuce" style="color: red; height: 30px;margin-right:200px;"><a href="Login.aspx">登录</a>|<a href="javascript:showDialog();">注册</a></label>
-        <label id="tishi">目前登录用户为：</label>
-        <label id="jjf" style="margin-right: 40px;">null</label>
-        <label id="tuichu" style="margin-right:10px;"><a href="javascript:reload();">退出登录</a></label>
-    </div>
-
-    <div class="ui-mask" id="mask" onselectstart="return false"></div>
-    <div class="ui-dialog" id="dialogMove" onselectstart='return false;'>
-        <div class="ui-dialog-title" id="dialogDrag" onselectstart="return false;">
-            用户注册
-		<a class="ui-dialog-closebutton" href="javascript:hideDialog();"></a>
-        </div>
-        <div class="ui-dialog-content">
-            <div class="ui-dialog-l40 ui-dialog-pt15">
-                <input id="u" class="ui-dialog-input ui-dialog-input-username" type="text" placeholder="手机/邮箱/用户名" />
-            </div>
-            <div class="ui-dialog-l40 ui-dialog-pt15">
-                <input id="p" class="ui-dialog-input ui-dialog-input-password" type="text" placeholder="密码" />
-            </div>
-            <br>
-            <div>
-                <input class="ui-dialog-submit" onclick="test()" type="button" value="注册">
-            </div>
-        </div>
-    </div>
-
     <form id="form1" runat="server">
+        <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: #48525E; text-align: right; color: red; height: 30px; line-height: 30px;">
+            <label id="zhuce" style="color: red; height: 30px; margin-right: 200px;"><a href="Login.aspx">登录</a>|<a href="javascript:showDialog();">注册</a></label>
+            <label id="tishi" style="display: none;">目前登录用户为：</label>
+            <label id="jjf" style="display: none;margin-right:40px;"></label>
+            <asp:Button ID="btnExit" runat="server" Text="退出登录" Style="margin-right: 10px; width: 80px; display: none;" OnClick="Button1_Click1" />
+        </div>
+
+        <div class="ui-mask" id="mask" onselectstart="return false"></div>
+        <div class="ui-dialog" id="dialogMove" onselectstart='return false;'>
+            <div class="ui-dialog-title" id="dialogDrag" onselectstart="return false;">
+                用户注册
+		<a class="ui-dialog-closebutton" href="javascript:hideDialog();"></a>
+            </div>
+            <div class="ui-dialog-content">
+                <div class="ui-dialog-l40 ui-dialog-pt15">
+                    <input id="u" class="ui-dialog-input ui-dialog-input-username" type="text" placeholder="手机/邮箱/用户名" />
+                </div>
+                <div class="ui-dialog-l40 ui-dialog-pt15">
+                    <input id="p" class="ui-dialog-input ui-dialog-input-password" type="text" placeholder="密码" />
+                </div>
+                <br>
+                <div>
+                    <input class="ui-dialog-submit" onclick="test()" type="button" value="注册">
+                </div>
+            </div>
+        </div>
+
+
         <div id="top">
             <a href="homePage.aspx">
                 <img src="image/logo2.png" style="width: 160px; height: 120px;" runat="server" /></a>

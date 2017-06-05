@@ -152,6 +152,7 @@
     <Compile Include="newsContent.aspx.designer.cs">
       <DependentUpon>newsContent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\BLL\BLL.csproj">

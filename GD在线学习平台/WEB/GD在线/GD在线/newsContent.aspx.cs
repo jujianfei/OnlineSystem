@@ -91,7 +91,7 @@ namespace GD在线学习平台
                 return;
             }
             //判断用户是否登录
-            if (Model.GoAnyWhere.uid==null)
+            if (HttpContext.Current.Session["username"] == null)
             {
                  Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", "<script language='javascript' defer>alert('请登录后方可评论！');</script>");//提示框，且背景不变白
                  return;

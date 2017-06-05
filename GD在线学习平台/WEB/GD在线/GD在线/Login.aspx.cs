@@ -16,10 +16,11 @@ namespace GD在线
         {
 
         }
-     
-        [WebMethod]
+
+        [WebMethod(EnableSession = true)]
         public static string hite(string a, string b)
         {
+
             SqlConnection conn = new SqlConnection("server=.;database=NewsSystem;uid=sa;pwd=jujianfei");
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "select id, userName,userPassword from UserManager where userName='" + a + "' And userPassword='" + b + "'";
@@ -30,10 +31,11 @@ namespace GD在线
                 if (dr.HasRows)
                 {
                     dr.Read();//不管dr取到多少条数据，只取出第一行
-                    //将用户登录信息写到全局变量uid和pwd中
+                    //将用户登录id写到全局变量id中
                     Model.GoAnyWhere.id = dr.GetInt32(0); 
-                    Model.GoAnyWhere.uid = a;
-                    Model.GoAnyWhere.pwd = b;
+                    //将用户名和密码写到Session中
+                    HttpContext.Current.Session["username"] = a;
+                    HttpContext.Current.Session["password"] = b;
                     return "登录成功！";
                 }
                 else
@@ -67,6 +69,12 @@ namespace GD在线
                 conn.Close();
                 return "注册失败，请联系管理员！";
             }
+        }
+        [WebMethod(EnableSession = true)]
+        public static string modify()
+        {
+            HttpContext.Current.Session["username"] = null;
+            return "退出成功！";
         }
 
     }
