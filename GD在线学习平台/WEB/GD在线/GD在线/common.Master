@@ -55,7 +55,7 @@
     <%-- 页面最上面的一条，固定栏 --%>
     <form id="form1" runat="server">
         <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: #48525E; text-align: right; color: red; height: 30px; line-height: 30px;">
-            <label id="zhuce" style="color: red; height: 30px; margin-right: 200px;"><a href="Login.aspx">登录</a>|<a href="javascript:showDialog();">注册</a></label>
+            <label id="zhuce" style="height: 30px; margin-right: 200px;"><a href="Login.aspx"><font color="white">登录</font></a><font color="white">|</font><a href="javascript:showDialog();"><font color="white">注册</font></a></label>
             <label id="tishi" style="display: none;">目前登录用户为：</label>
             <label id="jjf" style="display: none;margin-right:40px;"></label>
             <asp:Button ID="btnExit" runat="server" Text="退出登录" Style="margin-right: 10px; width: 80px; display: none;" OnClick="Button1_Click1" />

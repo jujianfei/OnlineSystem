@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Services;
 using System.Web.UI;
@@ -59,7 +60,16 @@ namespace GD在线学习平台
         protected void Button1_Click1(object sender, EventArgs e)
         {
             HttpContext.Current.Session["username"] = null;
-            Response.Redirect("homePage.aspx");
+            string url = HttpContext.Current.Request.Url.ToString();//获取当前页的url
+            string url2 = HttpContext.Current.Request.UrlReferrer.ToString();//获取上一页的url
+            if (url == "http://localhost:10698/admin/categorymanager.aspx")
+            {
+                Response.Redirect("error.html");
+            }
+            else
+            {
+                Response.Redirect("homePage.aspx", false);
+            }
         }
     }
 }
