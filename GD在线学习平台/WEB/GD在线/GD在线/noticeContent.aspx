@@ -5,9 +5,13 @@
         <h4>
             <asp:Label ID="lblTitle" runat="server" Text="Label"></asp:Label>
         </h4>
-        <p class="con">
-            <asp:Label ID="lblContent" runat="server" Text="Label"></asp:Label>
-        </p>
+        <div style="text-indent:40px;">
+            <p class="con">
+                <asp:Label ID="lblContent" runat="server" Text="Label"></asp:Label>
+            </p>
+
+        </div>
+
         <p class="con_time">发布时间：<asp:Label ID="lblCreateTime" runat="server" Text="Label"></asp:Label></p>
     </div>
 </asp:Content>

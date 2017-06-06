@@ -45,6 +45,7 @@
                 document.getElementById("zhuce").style.display = "none";
                 document.getElementById("jjf").style.display = "";
                 document.getElementById("tishi").style.display = "";
+                document.getElementById("btnExit").style.display = "";
             }
         }
         window.onload = myfun;
