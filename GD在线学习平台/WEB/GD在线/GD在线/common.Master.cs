@@ -68,7 +68,7 @@ namespace GD在线学习平台
             }
             else
             {
-                Response.Redirect("homePage.aspx", false);
+                Response.Redirect("homePage.aspx", false); 
             }
         }
     }
